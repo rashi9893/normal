@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | StudentHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+<!-- SIDEBAR -->
+
+<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">
+
+        <a href="index.html"
+           class="brand">
+
+            StudentHub
+
+        </a>
+
+    </div>
+
+
+    <nav class="side-nav">
+
+        <a href="dashboard.html"
+           class="side-link active">
+
+            Dashboard
+
+        </a>
+
+        <a href="#attendance"
+           class="side-link">
+
+            Attendance
+
+        </a>
+
+        <a href="#classes"
+           class="side-link">
+
+            Classes
+
+        </a>
+
+        <a href="#activity"
+           class="side-link">
+
+            Activity
+
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <a href="index.html"
+           class="side-link">
+
+            Home
+
+        </a>
+
+        <a href="login.html"
+           class="side-link"
+           id="logoutLink">
+
+            Logout
+
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- MAIN -->
+
+<div class="dashboard-main">
+
+
+    <!-- HEADER -->
+
+    <header class="dashboard-header">
+
+        <button
+            class="menu-btn"
+            id="menuBtn">
+
+            ☰
+
+        </button>
+
+
+        <div>
+
+            <span class="muted">
+                Student Management
+            </span>
+
+            <h2>
+                Dashboard
+            </h2>
+
+        </div>
+
+
+        <div class="profile">
+
+            <div class="profile-avatar">
+                RK
+            </div>
+
+            <div class="profile-info">
+
+                <strong>
+                    Rashi Khatri
+                </strong>
+
+                <span>
+                    Student
+                </span>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- CONTENT -->
+
+    <main class="dashboard-content">
+
+
+        <!-- WELCOME -->
+
+        <section class="welcome-row">
+
+            <div>
+
+                <p class="eyebrow">
+                    OVERVIEW
+                </p>
+
+                <h1>
+                    Good morning, Rashi.
+                </h1>
+
+                <p>
+                    Here is a quick overview of your academic activity.
+                </p>
+
+            </div>
+
+
+            <div class="date-box">
+
+                <span>
+                    Today
+                </span>
+
+                <strong id="todayDate">
+                    05 October 2026
+                </strong>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- STAT CARDS -->
+
+        <section class="stats-grid">
+
+
+            <article class="dashboard-card stat-card">
+
+                <span class="stat-label">
+                    Overall Attendance
+                </span>
+
+                <strong class="stat-value">
+                    86%
+                </strong>
+
+                <span class="stat-note positive">
+                    Above required 75%
+                </span>
+
+            </article>
+
+
+
+            <article class="dashboard-card stat-card">
+
+                <span class="stat-label">
+                    Total Courses
+                </span>
+
+                <strong class="stat-value">
+                    06
+                </strong>
+
+                <span class="stat-note">
+                    4 theory · 2 practical
+                </span>
+
+            </article>
+
+
+
+            <article class="dashboard-card stat-card">
+
+                <span class="stat-label">
+                    Assignments
+                </span>
+
+                <strong class="stat-value">
+                    04
+                </strong>
+
+                <span class="stat-note">
+                    2 due this week
+                </span>
+
+            </article>
+
+
+
+            <article class="dashboard-card stat-card">
+
+                <span class="stat-label">
+                    Academic Progress
+                </span>
+
+                <strong class="stat-value">
+                    78%
+                </strong>
+
+                <span class="stat-note">
+                    Semester progress
+                </span>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- ATTENDANCE + CLASSES -->
+
+        <section class="content-grid">
+
+
+            <!-- ATTENDANCE -->
+
+            <article
+                class="dashboard-card large-card"
+                id="attendance">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            ATTENDANCE
+                        </p>
+
+                        <h3>
+                            Subject attendance
+                        </h3>
+
+                    </div>
+
+                    <span class="card-meta">
+                        This semester
+                    </span>
+
+                </div>
+
+
+                <div class="attendance-list">
+
+
+                    <div class="attendance-item">
+
+                        <div class="attendance-title">
+
+                            <span>
+                                Data Structures
+                            </span>
+
+                            <strong>
+                                92%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <span style="width:92%"></span>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="attendance-item">
+
+                        <div class="attendance-title">
+
+                            <span>
+                                Database Management
+                            </span>
+
+                            <strong>
+                                88%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <span style="width:88%"></span>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="attendance-item">
+
+                        <div class="attendance-title">
+
+                            <span>
+                                Computer Organization
+                            </span>
+
+                            <strong>
+                                81%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <span style="width:81%"></span>
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="attendance-item">
+
+                        <div class="attendance-title">
+
+                            <span>
+                                Java Programming
+                            </span>
+
+                            <strong>
+                                76%
+                            </strong>
+
+                        </div>
+
+                        <div class="progress-track">
+                            <span style="width:76%"></span>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- CLASSES -->
+
+            <article
+                class="dashboard-card"
+                id="classes">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            UPCOMING
+                        </p>
+
+                        <h3>
+                            Today's classes
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="class-list">
+
+
+                    <div class="class-item">
+
+                        <div class="time">
+                            09:00
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Data Structures
+                            </strong>
+
+                            <span>
+                                Room 204 · Lecture
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="class-item">
+
+                        <div class="time">
+                            11:00
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                DBMS
+                            </strong>
+
+                            <span>
+                                Lab 03 · Practical
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="class-item">
+
+                        <div class="time">
+                            14:00
+                        </div>
+
+                        <div>
+
+                            <strong>
+                                Java Programming
+                            </strong>
+
+                            <span>
+                                Room 108 · Lecture
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+        </section>
+
+
+
+        <!-- ACTIVITY + PROGRESS -->
+
+        <section class="content-grid bottom-grid">
+
+
+            <!-- ACTIVITY -->
+
+            <article
+                class="dashboard-card large-card"
+                id="activity">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            RECENT ACTIVITY
+                        </p>
+
+                        <h3>
+                            Latest updates
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="activity-list">
+
+
+                    <div class="activity-item">
+
+                        <span class="activity-date">
+                            05 OCT
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                DBMS assignment submitted
+                            </strong>
+
+                            <span>
+                                Database Management · Today
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="activity-item">
+
+                        <span class="activity-date">
+                            03 OCT
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Attendance updated
+                            </strong>
+
+                            <span>
+                                Data Structures · 92%
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="activity-item">
+
+                        <span class="activity-date">
+                            01 OCT
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                New practical schedule added
+                            </strong>
+
+                            <span>
+                                Java Programming
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </article>
+
+
+
+            <!-- PROGRESS -->
+
+            <article
+                class="dashboard-card progress-card">
+
+                <div class="card-heading">
+
+                    <div>
+
+                        <p class="eyebrow">
+                            PROGRESS
+                        </p>
+
+                        <h3>
+                            Semester overview
+                        </h3>
+
+                    </div>
+
+                </div>
+
+
+                <div class="circle-progress">
+
+                    <div class="circle-inner">
+
+                        <strong>
+                            78%
+                        </strong>
+
+                        <span>
+                            Completed
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <p class="center-note">
+                    Keep up the consistency to finish
+                    the semester strongly.
+                </p>
+
+            </article>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<div
+    class="sidebar-overlay"
+    id="sidebarOverlay">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

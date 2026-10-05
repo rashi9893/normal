@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Login | StudentHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body class="auth-page">
+
+
+<main class="auth-layout">
+
+
+    <!-- LEFT SIDE -->
+
+    <section class="auth-info">
+
+        <a href="index.html"
+           class="brand brand-light">
+
+            StudentHub
+
+        </a>
+
+
+        <div class="auth-info-content">
+
+            <p class="eyebrow light">
+                STUDENT PORTAL
+            </p>
+
+            <h1>
+                Welcome back to your academic workspace.
+            </h1>
+
+            <p>
+                Access your attendance, schedule, academic
+                progress and recent activity from one dashboard.
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- LOGIN -->
+
+    <section class="auth-card-wrap">
+
+        <div class="auth-card">
+
+
+            <a href="index.html"
+               class="back-link">
+
+                ← Back to home
+
+            </a>
+
+
+            <div class="auth-heading">
+
+                <p class="eyebrow">
+                    LOGIN
+                </p>
+
+                <h2>
+                    Sign in to your account
+                </h2>
+
+                <p>
+                    Enter your student credentials to continue.
+                </p>
+
+            </div>
+
+
+
+            <form id="loginForm"
+                  class="login-form">
+
+
+                <label for="email">
+                    Student email
+                </label>
+
+                <input
+                    id="email"
+                    type="email"
+                    placeholder="student@example.com"
+                    required
+                >
+
+
+                <label for="password">
+                    Password
+                </label>
+
+                <input
+                    id="password"
+                    type="password"
+                    placeholder="Enter your password"
+                    required
+                >
+
+
+
+                <div class="form-row">
+
+                    <label class="check-label">
+
+                        <input
+                            type="checkbox"
+                            id="remember"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <a href="#"
+                       class="text-link"
+                       id="forgotPassword">
+
+                        Forgot password?
+
+                    </a>
+
+                </div>
+
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary full-width">
+
+                    Login
+
+                </button>
+
+
+                <p
+                    class="form-message"
+                    id="formMessage">
+                </p>
+
+            </form>
+
+
+
+            <div class="demo-note">
+
+                <strong>
+                    Demo mode
+                </strong>
+
+                <span>
+                    Use any valid email and a password
+                    with at least 4 characters.
+                </span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
