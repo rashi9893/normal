@@ -242,5 +242,146 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
     }
+    const openSubjectModal = document.getElementById("openSubjectModal");
+const closeSubjectModal = document.getElementById("closeSubjectModal");
+const cancelSubject = document.getElementById("cancelSubject");
+
+const subjectModal = document.getElementById("subjectModal");
+const subjectForm = document.getElementById("subjectForm");
+
+const subjectList = document.getElementById("subjectList");
+const modalError = document.getElementById("modalError");
+
+// Open modal
+openSubjectModal.addEventListener("click", function () {
+    subjectModal.classList.add("active");
+});
+
+// Close modal
+closeSubjectModal.addEventListener("click", function () {
+    subjectModal.classList.remove("active");
+});
+
+// Cancel
+cancelSubject.addEventListener("click", function () {
+    subjectModal.classList.remove("active");
+    subjectForm.reset();
+    modalError.textContent = "";
+});
+
+// Load subjects
+let subjects = JSON.parse(localStorage.getItem("studentSubjects")) || [];
+
+displaySubjects();
+
+// Add subject
+subjectForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("subjectName").value.trim();
+    const code = document.getElementById("subjectCode").value.trim();
+    const teacher = document.getElementById("teacherName").value.trim();
+
+    const total = Number(
+        document.getElementById("totalClassInput").value
+    );
+
+    const attended = Number(
+        document.getElementById("attendedClassInput").value
+    );
+
+    // Validation
+    if (attended > total) {
+        modalError.textContent =
+            "Attended classes cannot be greater than total classes.";
+        return;
+    }
+
+    if (total <= 0) {
+        modalError.textContent =
+            "Total classes must be greater than 0.";
+        return;
+    }
+
+    // Create subject
+    const subject = {
+        name: name,
+        code: code,
+        teacher: teacher,
+        total: total,
+        attended: attended
+    };
+
+    // Add subject
+    subjects.push(subject);
+
+    // Save
+    localStorage.setItem(
+        "studentSubjects",
+        JSON.stringify(subjects)
+    );
+
+    // Show subjects
+    displaySubjects();
+
+    // Close modal
+    subjectModal.classList.remove("active");
+
+    // Clear form
+    subjectForm.reset();
+    modalError.textContent = "";
+});
+
+
+// Display subjects
+function displaySubjects() {
+
+    subjectList.innerHTML = "";
+
+    subjects.forEach(function (subject, index) {
+
+        const percentage =
+            Math.round((subject.attended / subject.total) * 100);
+
+        const subjectDiv = document.createElement("div");
+
+        subjectDiv.className = "subject-item";
+
+        subjectDiv.innerHTML = `
+            <div>
+                <h3>${subject.name}</h3>
+                <p>Code: ${subject.code}</p>
+                <p>Teacher: ${subject.teacher}</p>
+                <p>
+                    Attendance:
+                    ${subject.attended}/${subject.total}
+                    (${percentage}%)
+                </p>
+            </div>
+
+            <button
+                class="delete-btn"
+                onclick="deleteSubject(${index})">
+                Delete
+            </button>
+        `;
+
+        subjectList.appendChild(subjectDiv);
+    });
+}
+
+
+// Delete subject
+function deleteSubject(index) {
+
+    subjects.splice(index, 1);
+
+    localStorage.setItem(
+        "studentSubjects",
+        JSON.stringify(subjects)
+    );
+
+    displaySubjects();
+}
 
 });
